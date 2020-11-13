@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+    <style>
+        .main{
+            width:500px;
+            height: 500px;
+            /*{#background-color: green;#}*/
+            overflow: hidden;
+            margin: 10px auto;
+            box-sizing: border-box;
+        }
+
+        h1{
+            font-family: "黑体";
+            font-size: 24px;
+            height: 40px;
+            border-bottom: 1px solid #ddd;
+        }
+         span{
+            width: 110px;
+            display: inline-block;
+            text-align: right;
+        }
+        input{
+            width: 300px;
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .st1{
+            text-align: center;
+            display: none;
+        }
+        .areas{
+            text-align: center;
+        }
+    </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/areas.css">
+    <script src="js/areas.js"></script>
+    <script src="js/user.js"></script>
+</head>
+<body>
+<div class="main">
+    <h1>用户信息界面</h1>
+    <div>
+        <span>用户名:</span><input type="text" name="name" id="username"><br>
+        <span>邮箱:</span><input type="text" name="email" id="email"><br>
+        <span>手机号码:</span><input type="text" name="phone" id="phone"><br>
+        <div class="areas">
+            <div id="wrap"></div>
+                <script>
+                    var address = new Address({
+                        wrapId: 'wrap',
+                        showArr: ['provinces','citys','areas'],
+                        beforeCreat:function(){
+                            console.log("beforeCreat")
+                        },
+                        afterCreat:function(){
+                            console.log('afterCreat');
+                        }
+                    })
+                </script>
+        </div>
+        <span>地址:</span><input type="text" name="address" id="address"><br>
+        <div class="st1" id="st1">请输入正确的号码</div>
+        <span></span><input type="submit" value="修改数据" name="sub" id="sub">
+    </div>
+</div>
+</body>
+</html>

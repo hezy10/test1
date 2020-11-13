@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        .main{
+            width:500px;
+            height: 500px;
+            /*{#background-color: green;#}*/
+            overflow: hidden;
+            margin: 10px auto;
+            box-sizing: border-box;
+        }
+         span{
+            width: 110px;
+            display: inline-block;
+            text-align: right;
+        }
+        input{
+            width: 300px;
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+    </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+<div class="main">
+    <span>用户名：</span><input type="text" id="username" name="username"><br>
+    <span>密码：</span><input type="password" id="pwd" name="pwd"><br>
+    <span></span><input type="submit" value="登录" id="sub" name="sub">
+</div>
+</body>
+</html>
